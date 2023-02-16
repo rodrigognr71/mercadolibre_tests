@@ -3,6 +3,7 @@ Feature: LabCorp
   Scenario: Search a job
     Given I navigate to MercadoLibre "Argentina"
     And I go to "Vehículos"
+    And I search for "Volskwagen"
     And I click Search button
     And I set "2000000" as max price
     And I select "Córdoba" as location

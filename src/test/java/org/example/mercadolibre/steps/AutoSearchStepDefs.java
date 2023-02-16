@@ -43,4 +43,10 @@ public class AutoSearchStepDefs {
     public void iPrintTheNumberOfResults() {
         LOGGER.info(() -> "Number of results : " + autosSearch.getQuantityResult());
     }
+
+    @And("I search for {string}")
+    public void iSearchFor(final String vehicle) {
+        autosSearch = carsCategory.setSearchBox(vehicle);
+        autosSearch.searchVehicle(vehicle);
+    }
 }
